@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;500;600&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 14px !important;
+    letter-spacing: 0.06em;
+    line-height: 24px !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar {
+    background-color: #e2decb !important;
+}
+
+.fixed-top {
+    box-shadow: 5px 10px 30px rgb(0 0 0 / 34%);
+}
+
+.carousel-inner img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 30% !important;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    line-height: 2;
+}
+
+.carousel-inner::after {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* section 1 */
+
+.title-icon {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    position: relative;
+    opacity: .8;
+    background: url('https://api.iconify.design/bi/fire.svg?color=%23e2decb') no-repeat center center / contain;
+}
+
+.title-icon:before {
+    position: absolute;
+    width: 115px;
+    right: 180px;
+    left: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    background: #f1f1f1;
+
+    height: 3px;
+    bottom: 16px;
+    opacity: 1;
+    font-size: 68px;
+    font-family: serif;
+    content: " ";
+}
+
+.title-icon:after {
+    position: absolute;
+
+    left: 180px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f1f1f1;
+
+    width: 115px;
+    height: 3px;
+    bottom: 16px;
+    opacity: 1;
+    font-size: 68px;
+    font-family: serif;
+    content: " ";
+}
+
+.see-more {
+    text-align: center;
+    display: inline-block;
+    color: #8a8f6a;
+    font-size: 14px;
+    margin-top: 10px;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.see-more:hover {
+    color: #8a8f6a !important;
+}
+
+.see-more:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #8a8f6a;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.see-more:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.box .img {
+    margin-bottom: 20px;
+    border: solid 1px #f1f1f1;
+    border-radius: 2px;
+    padding: 1px;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.back_blog {
+    margin-bottom: 50px;
+}
+
+.back_blog img {
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.back_blog::after {
+    width: 300px;
+    position: absolute;
+    height: 450px;
+    content: "";
+    right: 15px;
+    top: -35px;
+    box-shadow: 0 0 60px -10px rgb(0 0 0 / 15%);
+    background: #e2decb;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .carousel-caption {
+        top: 40% !important;
+        left: 13% !important;
+        text-align: left !important;
+        width: 30%;
+    }
+
+    .carousel-inner::after {
+        width: 50%;
+        position: absolute;
+        height: 100vh;
+        content: "";
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .title-icon:before {
+        width: 200px;
+        right: 280px;
+    }
+
+    .title-icon:after {
+        left: 280px;
+        width: 200px;
+    }
+
+    .back_blog::after {
+        width: 412px;
+        position: absolute;
+        height: 618px;
+        content: "";
+        right: 215px;
+        top: -40px;
+        box-shadow: 0 0 60px -10px rgb(0 0 0 / 15%);
+        background: #e2decb;
+    }
+
+    .back_blog img {
+        width: auto;
+        height: 618px;
+    }
+
+    .section-2 .text-box {
+        text-align: left !important;
+    }
+}
